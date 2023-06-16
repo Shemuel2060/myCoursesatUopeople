@@ -1,8 +1,10 @@
 import "../styles/courses.css"
 import logo from '../images/Arola.png'
 import { Link } from 'react-router-dom'
+import Grid from '@mui/material/Grid.jsx'
 
-
+import BookCard from '../components/Books';
+import subjects from '../data.json';
 
 
 const Python = () => {
@@ -22,7 +24,7 @@ const Python = () => {
                         alt= "python-programming"/>
             </div>
             <div className='body-text'>
-                <h2>👋Welcome to CS 1101- Programming Fundamentals</h2>
+                <h2>👋Welcome to CS 1101- Programming Fundamentals</h2><br/>
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting 
                     industry. Lorem Ipsum has been the industry's standard dummy text ever 
@@ -33,16 +35,37 @@ const Python = () => {
                     containing Lorem Ipsum passages, and more recently with desktop publishing software
                     like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
+                <br/>
+                <h2>📂Course Content</h2><br/>
+                <ul>
+                    <li>Unit 1: Introduction and Fundamental Concepts </li>
+                    <li>Unit 2: Variables, Expressions, Statements and Functions </li>
+                    <li>Unit 3: Conditionals and Recursion </li>
+                    <li>Unit 4: Functions and Return Values </li>
+                    <li>Unit 5: Iteration and Strings </li>
+                    <li>Unit 6: Lists </li>
+                    <li>Unit 7: Dictionaries and Tuples </li>
+                    <li>Unit 8: Files </li>
+                    <li>Unit 9: Course Review & Final Exam </li><br/>
+                    <hr style={{width: '100%'}}/><br/>
+                    <h3>📚 Relevant Texts</h3>
+                     <Grid container spacing={2}>
+                        {subjects.map((subject,index) => <BookCard subject={subject} key={index} /> )}
+                    </Grid>
+                    <ul>
+                        <li>{} by <i>{}</i>. Get it <a href='{}'>here</a></li>
+                        <li>Text book 2. Get it <a href=''>here</a></li>
+                        <li>Text book 3. Get it <a href=''>here</a></li>
+                    </ul>
+                </ul><br/>
+                <h2>👋My work</h2>
                 <p>
-                    
-                    It is a long established fact that a reader will be distracted by the
-                    readable content of a page when looking at its layout. The point of using
-                    Lorem Ipsum is that it has a more-or-less normal distribution of letters, as
-                    opposed to using 'Content here, content here', making it look like readable                     English. Many desktop publishing packages and web page editors now use Lorem <br/>
-                    Ipsum as their default model text, and a search for 'lorem ipsum' will uncover
-                    many web sites still in their infancy. Various versions have evolved over the 
-                    years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                    </p>
+
+                </p><br/>
+                <h2>👋Recommended Map</h2><br/>
+                <p>
+
+                </p>
             </div>
             
         </div>
