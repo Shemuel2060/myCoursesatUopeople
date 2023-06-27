@@ -1,10 +1,12 @@
 import "../styles/courses.css"
 import logo from '../images/Arola.png'
 import { Link } from 'react-router-dom'
-import Grid from '@mui/material/Grid.jsx'
+import Grid from '@mui/material/Grid'
 
-import BookCard from '../components/Books';
+import BookCard from '../components/Book';
 import subjects from '../data.json';
+import Box from '@mui/material/Box';
+import { Typography } from "@mui/material";
 
 
 const Python = () => {
@@ -48,16 +50,28 @@ const Python = () => {
                     <li>Unit 8: Files </li>
                     <li>Unit 9: Course Review & Final Exam </li><br/>
                     <hr style={{width: '100%'}}/><br/>
-                    <h3>📚 Relevant Texts</h3>
+                </ul><br />
+                <h3>📚 Relevant Texts</h3>
                      <Grid container spacing={2}>
-                        {subjects.map((subject,index) => <BookCard subject={subject} key={index} /> )}
+                    {/* {subjects.map((subject) => // subject here is an object; not at array
+                        subject.books.map((bk, index) => <BookCard book={bk} key={index} />))} */}
+                    <Box sx={{
+                        display: 'flex',
+                        alignItems: 'center',
+                    }}
+                        marginTop={3}
+                    >
+                            {subjects.map((subject) => subject.books.map((bk, index) =>                                
+                               <Typography variant='subtitle1' component='h4' key={index}
+                                sx={{ color: 'deeppink', fontWeight: 'bold' }}>
+                                Title: {bk.title}
+                                Author: {bk.author}
+                                <Link to={`${bk.url}`} target='_parent'>Get it here</Link>
+                            </Typography>                        
+                            ))}
+                       
+                    </Box>
                     </Grid>
-                    <ul>
-                        <li>{} by <i>{}</i>. Get it <a href='{}'>here</a></li>
-                        <li>Text book 2. Get it <a href=''>here</a></li>
-                        <li>Text book 3. Get it <a href=''>here</a></li>
-                    </ul>
-                </ul><br/>
                 <h2>👋My work</h2>
                 <p>
 

@@ -8,18 +8,18 @@
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKdHDCPBo1jHtMBUkxNXCCHTdmyx9EaEr1kQ&usqp=CAU",
     "alt": "python-programming",
     "googleDriveLink": "/Python",
-    "books":{
-      "1": {
+    "books":[
+       {
         "title": "Think Python: How to Think Like a Computer Scientist",
         "author": "Allen Downey",
         "url": "https://greenteapress.com/thinkpython/thinkpython.pdf"
       },
-      "2": {
+      {
         "title": "A Practical Introduction to Python Programming",
         "author": "Brian Heinold",
         "url": "https://www.brianheinold.net/python/A_Practical_Introduction_to_Python_Programming_Heinold.pdf"
       }
-    }
+    ]
   },
   {
     "id": 2,
